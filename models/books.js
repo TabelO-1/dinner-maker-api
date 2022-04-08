@@ -5,8 +5,8 @@ const mongoose = require("mongoose");
 const bookSchema = new mongoose.Schema({
     title: {type: String},
     desc: {type: String},
-    status: {type: String, uppercase: true, enum: ["LIFE-CHANGING", "FAVORITE", "RECOMENDED"]}
+    status: {type: String, uppercase: true, enum: ["FAVORITE", "RECOMENDED"]}
 })
 
-const bookModel = mongoonse.model('book', bookSchema)
-module.exports = bookModel
+const bookModel = mongoose.model('book', bookSchema)
+module.exports = bookModel;
