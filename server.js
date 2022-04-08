@@ -5,7 +5,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(cors());
-const mongoose = require(mongoose);
+const mongoose = require("mongoose");
 const db = mongoose.connection;
 const Book = require("./models/books");
 
