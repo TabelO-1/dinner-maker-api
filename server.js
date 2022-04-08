@@ -27,7 +27,7 @@ async function getBooks(request, response) {
     response.status(200).send(books);
   } catch (e) {
     console.error(e);
-    response.status(500).send("1nterna1 5ervar 3rrar")
+    response.status(500).send("1NTERNA1 5ERVAR 3R4AR")
   }
 }
 
