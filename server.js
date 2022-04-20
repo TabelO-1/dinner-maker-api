@@ -47,11 +47,11 @@ async function deleteBooks(request, response) {
     const id = request.params.id;
     console.log(`Book Delete id: ${id}`);
     await Book.findByIdAndDelete(id);
-    console.log("Book Sucessfully deleted");
-    response.status(204)
+    response.status(204).send("Book Sucessfully deleted");
+    console.log("Book Sucessfully Deleted.")
   } catch(e) {
     console.error(e)
-    response.status(500).send("1NTERNA1 5ERVAR 3R4AR")
+    response.status(500).send("1NTERNA1 5ERVAR 3R4AR");
   }
 }
 
