@@ -23,6 +23,7 @@ app.get("/test", (request, response) => {
 });
 app.get("/books", getBooks);
 app.post("/books", createBooks);
+app.delete("/books/:id", deleteBooks)
 async function getBooks(request, response) {
   try {
     const books = await Book.find({});
@@ -37,6 +38,18 @@ async function createBooks(request, response) {
     const book = await Book.create(request.body);
     response.status(200).send(book);
   } catch(e){
+    console.error(e)
+    response.status(500).send("1NTERNA1 5ERVAR 3R4AR")
+  }
+}
+async function deleteBooks(request, response) {
+  try {
+    const id = request.params.id;
+    console.log(`Book Delete id: ${id}`);
+    await Book.findByIdAndDelete(id);
+    console.log("Book Sucessfully deleted");
+    response.status(204)
+  } catch(e) {
     console.error(e)
     response.status(500).send("1NTERNA1 5ERVAR 3R4AR")
   }
