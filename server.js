@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 const mongoose = require("mongoose");
 const db = mongoose.connection;
-const Book = require("./models/books");
+const Meal = require("./models/meals");
 
 mongoose.connect(process.env.MONGO_CONNECT);
 db.on("error", console.error.bind(console, "connection error: "));
@@ -21,34 +21,34 @@ const PORT = process.env.PORT || 3001;
 app.get("/test", (request, response) => {
   response.send("test request received");
 });
-app.get("/books", getBooks);
-app.post("/books", createBooks);
-app.delete("/books/:id", deleteBooks)
-async function getBooks(request, response) {
+app.get("/meals", getMeals);
+app.post("/meals", createMeals);
+app.delete("/meal/:id", deleteMeals)
+async function getMeals(request, response) {
   try {
-    const books = await Book.find({});
-    response.status(200).send(books);
+    const meals = await Meal.find({});
+    response.status(200).send(meals);
   } catch (e) {
     console.error(e);
     response.status(500).send("1NTERNA1 5ERVAR 3R4AR")
   }
 }
-async function createBooks(request, response) {
+async function createMeals(request, response) {
   try {
-    const book = await Book.create(request.body);
-    response.status(200).send(book);
+    const meal = await Meal.create(request.body);
+    response.status(200).send(meal);
   } catch(e){
     console.error(e)
     response.status(500).send("1NTERNA1 5ERVAR 3R4AR")
   }
 }
-async function deleteBooks(request, response) {
+async function deleteMeals(request, response) {
   try {
     const id = request.params.id;
-    console.log(`Book Delete id: ${id}`);
-    await Book.findByIdAndDelete(id);
-    response.status(204).send("Book Sucessfully deleted");
-    console.log("Book Sucessfully Deleted.")
+    console.log(`Meal Delete id: ${id}`);
+    await Meal.findByIdAndDelete(id);
+    response.status(204).send("Meal Sucessfully deleted");
+    console.log("Meal Sucessfully Deleted.")
   } catch(e) {
     console.error(e)
     response.status(500).send("1NTERNA1 5ERVAR 3R4AR");

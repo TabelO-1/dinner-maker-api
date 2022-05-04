@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Tacos",
+        "description": "Mom's Delicous Tacos",
+        "cuisine": "Mexican",
+        "value": 0
+    },
+    {
+        "name": "Mexican Resturant",
+        "description": "Taco Taco, Burrito Burrito",
+        "cuisine": "Mexican",
+        "value": 1
+    },
+    {
+        "name": "Spahgetti",
+        "description": "Mason doesn't like olives",
+        "cuisine": "Italian",
+        "value": 2
+    },
+    {
+        "name": "Waffles",
+        "description": "Waffles be Meffles",
+        "cuisine": "Breakfast",
+        "value": 3
+    },
+    {
+        "name": "French Toast",
+        "description": "Mason doesn't like this food",
+        "cuisine": "Breakfast",
+        "value": 4
+    },
+    {
+        "name": "Steak",
+        "description": "Steak with...mashed potatoes or green beans or corn with some salad",
+        "cuisine": null,
+        "value": 5
+    },
+    {
+        "name": "Ice Cream",
+        "description": "TROLLOLOLOLOL PRANKED!!!",
+        "cuisine": "Dessert",
+        "value": 6
+    },
+    {
+        "name": "Totinos Pizza",
+        "description": "Mason gets half of it!",
+        "cuisine": "Italian",
+        "value": 7
+    },
+    {
+        "name": "Pizza",
+        "description": "Delicousness, if you put ranch on it I will renouce being related to this family.",
+        "cuisine": "Italian",
+        "value": 8
+    },
+    {
+        "name": "Rice Bowls",
+        "description": "A bowl, filled with rice, beans, corn, and MEAT.",
+        "cuisine": "Asian",
+        "value": 9
+    },
+    {
+        "name": "Salmon",
+        "description": "A delicous fish served with rice or something else, I don't really remember.",
+        "cuisine": "Fish",
+        "value": 10
+    }
+]
