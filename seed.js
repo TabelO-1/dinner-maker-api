@@ -12,7 +12,7 @@ async function mealCreate() {
     await Meal.create({
         name: "Tacos",
         desc: "Mom's Delicous Tacos",
-        cusine: "Mexican",
+        cuisine: "Mexican",
         recipe: "Put meat and sour cream and then lettuce and then cheese and then delicous"
     });
     console.log("Wonderful recipe book loaded!");

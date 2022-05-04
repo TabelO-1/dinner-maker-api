@@ -23,7 +23,7 @@ app.get("/test", (request, response) => {
 });
 app.get("/meals", getMeals);
 app.post("/meals", createMeals);
-app.delete("/meal/:id", deleteMeals)
+app.delete("/meals/:id", deleteMeals)
 async function getMeals(request, response) {
   try {
     const meals = await Meal.find({});
